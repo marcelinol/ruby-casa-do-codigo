@@ -1,9 +1,10 @@
 class Book
   attr_accessor :price
-  attr_reader :category, :author
+  attr_reader :category, :author, :title
 
-  def initialize(author, isbn = '1', page_number, price, category)
+  def initialize(author, title, isbn = '1', page_number, price, category)
     @author = author
+    @title = title
     @isbn = isbn
     @page_number = page_number
     @price = price
@@ -15,6 +16,10 @@ class Book
   end
 
   def to_s
-    "Author: #{@author}, Isbn: #{@isbn}, Pages: #{@page_number}"
+    "Author: #{@title} - #{@author}, Isbn: #{@isbn}, Pages: #{@page_number}"
+  end
+
+  def hash
+    @isbn.hash
   end
 end
