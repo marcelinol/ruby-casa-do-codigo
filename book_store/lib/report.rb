@@ -4,9 +4,7 @@ class Report
   end
 
   def total_price
-    @library.books.inject(0) do |total_price, book|
-      total_price += book.price
-    end
+    @library.books.map(&:price).inject(:+)
   end
 
   def titles
