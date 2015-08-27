@@ -14,9 +14,9 @@ class Library
     @books.values.flatten
   end
 
-  def books_by_category(category)
+  def books_by_category(category, &block)
     @books[category].each do |book|
-      yield book if block_given?
+      block.call(book)
     end
   end
 end
