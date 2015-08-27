@@ -8,4 +8,8 @@ class Report
       total_price += book.price
     end
   end
+
+  def titles
+    @library.books.map(&:title)
+  end
 end
