@@ -1,0 +1,24 @@
+--- !ruby/object:Book
+author: TDD
+title: Mauricio Aniche
+isbn: '123454'
+page_number: 247
+price: 69.9
+category: :testes
+
+--- !ruby/object:Book
+author: TDD
+title: Mauricio Aniche
+isbn: '12345324'
+page_number: 247
+price: 69.9
+category: :testes
+
+--- !ruby/object:Book
+author: TDD
+title: Mauricio Aniche
+isbn: '123454'
+page_number: 247
+price: 69.9
+category: :testes
+
