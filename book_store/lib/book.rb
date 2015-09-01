@@ -1,4 +1,4 @@
-class Book
+class Book < Media
   attr_accessor :price
   attr_reader :category, :author, :title, :isbn
 

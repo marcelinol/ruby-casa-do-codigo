@@ -1,0 +1,2 @@
+class Media
+end

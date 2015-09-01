@@ -1,0 +1,2 @@
+class DVD < Media
+end
