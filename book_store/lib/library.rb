@@ -2,18 +2,21 @@ class Library
   attr_reader :books
 
   def initialize
-    @books = []
     @file_database = FileDatabase.new
   end
 
   def add_book(book)
     save(book) do
-      @books << book
+      books << book
     end
   end
 
   def books_by_category(category)
-    @books.select { |book| book.category == (category) }
+    books.select { |book| book.category == (category) }
+  end
+
+  def books
+    @books ||= @file_database.load
   end
 
   private
