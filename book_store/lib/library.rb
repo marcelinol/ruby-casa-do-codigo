@@ -3,11 +3,13 @@ class Library
 
   def initialize
     @books = {}
+    @file_database = FileDatabase.new
   end
 
   def add_book(book)
     @books[book.category] ||= []
     @books[book.category] << book
+    @file_database.save(book)
   end
 
   def books
@@ -19,4 +21,6 @@ class Library
       block.call(book)
     end
   end
+
+  #TODO: validar se já nao existe um livro com aquele isbn
 end
