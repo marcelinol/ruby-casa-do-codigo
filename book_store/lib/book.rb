@@ -1,8 +1,7 @@
 class Book < Media
-  attr_accessor :price
-  attr_reader :category, :author, :title, :isbn
+  attr_reader :category, :author, :isbn
 
-  def initialize(author, title, isbn = '1', page_number, price, category)
+  def initialize(title, author, isbn = '1', page_number, price, category)
     @author = author
     @title = title
     @isbn = isbn
