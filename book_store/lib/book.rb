@@ -8,6 +8,7 @@ class Book < Media
     @page_number = page_number
     @price = price
     @category = category
+    @discount = 0.15
   end
 
   def eql?(other_book)
